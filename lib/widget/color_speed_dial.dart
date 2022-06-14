@@ -26,17 +26,20 @@ class ColorSpeedDialState extends State<ColorSpeedDial> {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        width: 180.0,
-        child: SpeedDial(
-          overlayOpacity: 0.0,
-          elevation: 0.0,
-          backgroundColor: currentColor,
-          visible: true,
-          curve: Curves.elasticInOut,
-          children: speedDials
-              .map((entry) => speedDialChild(color: entry.color, label: entry.label))
-              .toList(),
-          child: const Icon(Icons.color_lens, size: 36),
+        // width: 180.0,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SpeedDial(
+            overlayOpacity: 0.0,
+            elevation: 0.0,
+            backgroundColor: currentColor,
+            visible: true,
+            curve: Curves.elasticInOut,
+            children: speedDials
+                .map((entry) => speedDialChild(color: entry.color, label: entry.label))
+                .toList(),
+            child: const Icon(Icons.color_lens, size: 36),
+          ),
         ),
       );
 

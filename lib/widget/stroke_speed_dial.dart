@@ -26,33 +26,36 @@ class StrokeSpeedDialState extends State<StrokeSpeedDial> {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        width: 150.0,
-        child: SpeedDial(
-          overlayOpacity: 0.0,
-          elevation: 0.0,
-          backgroundColor: Theme.of(context).primaryColor,
-          visible: true,
-          curve: Curves.elasticInOut,
-          children: strokeWidths.map(speedDialChild).toList(),
-          child: Stack(
-            children: [
-              const Center(child: Icon(Icons.edit, size: 36)),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Container(
-                  height: 26,
-                  width: 26,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: Colors.red,
-                  ),
+        // width: 150.0,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SpeedDial(
+            overlayOpacity: 0.0,
+            elevation: 0.0,
+            backgroundColor: Theme.of(context).primaryColor,
+            visible: true,
+            curve: Curves.elasticInOut,
+            children: strokeWidths.map(speedDialChild).toList(),
+            child: Stack(
+              children: [
+                const Center(child: Icon(Icons.edit, size: 36)),
+                Align(
+                  alignment: Alignment.bottomRight,
                   child: Container(
-                    margin: const EdgeInsets.all(2),
-                    child: buildText(currentStrokeWidth!),
+                    height: 26,
+                    width: 26,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30.0),
+                      color: Colors.red,
+                    ),
+                    child: Container(
+                      margin: const EdgeInsets.all(2),
+                      child: buildText(currentStrokeWidth!),
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       );

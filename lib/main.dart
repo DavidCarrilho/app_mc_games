@@ -36,14 +36,9 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('MCPaint'),
-        //   centerTitle: true,
-        // ),
         body: PaintingWidget(color: currentColor!, strokeWidth: currentStrokeWidth!),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        bottomNavigationBar: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             ColorSpeedDial(onSelected: color),
             StrokeSpeedDial(onSelected: strokeWidth),
