@@ -1,15 +1,15 @@
-// ignore_for_file: use_key_in_widget_constructors
-
-import 'package:app_mc_games/data/data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+
+import 'package:app_mc_games/data/data.dart';
 
 class ColorSpeedDial extends StatefulWidget {
   final void Function(Color) onSelected;
 
   const ColorSpeedDial({
+    Key? key,
     required this.onSelected,
-  });
+  }) : super(key: key);
 
   @override
   ColorSpeedDialState createState() => ColorSpeedDialState();
@@ -21,7 +21,6 @@ class ColorSpeedDialState extends State<ColorSpeedDial> {
   @override
   void initState() {
     super.initState();
-
     currentColor = speedDials[0].color;
   }
 
@@ -37,6 +36,7 @@ class ColorSpeedDialState extends State<ColorSpeedDial> {
           children: speedDials
               .map((entry) => speedDialChild(color: entry.color, label: entry.label))
               .toList(),
+          child: const Icon(Icons.color_lens, size: 36),
         ),
       );
 
