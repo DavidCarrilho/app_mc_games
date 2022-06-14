@@ -7,7 +7,11 @@ class PaintingWidget extends StatefulWidget {
   final Color? color;
   final double? strokeWidth;
 
-  const PaintingWidget({Key? key, this.color, this.strokeWidth}) : super(key: key);
+  const PaintingWidget({
+    Key? key,
+    this.color,
+    this.strokeWidth,
+  }) : super(key: key);
 
   @override
   PaintingWidgetState createState() => PaintingWidgetState();
@@ -31,7 +35,7 @@ class PaintingWidgetState extends State<PaintingWidget> {
       child: CustomPaint(
         foregroundPainter: painter,
         child: Container(
-          color: DefaultTextStyle.of(context).style.color,
+          color: Colors.white,
         ),
       ),
     );

@@ -40,7 +40,9 @@ class MyAppState extends State<MyApp> {
           centerTitle: true,
         ),
         body: PaintingWidget(color: currentColor!, strokeWidth: currentStrokeWidth!),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             ColorSpeedDial(onSelected: color),
             StrokeSpeedDial(onSelected: strokeWidth),
