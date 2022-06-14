@@ -5,5 +5,9 @@ class CustomStroke {
   final double? strokeWidth;
   final Offset? offset;
 
-  const CustomStroke({this.color, this.strokeWidth, this.offset});
+  const CustomStroke({
+    this.color,
+    this.strokeWidth,
+    this.offset,
+  });
 }

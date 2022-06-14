@@ -26,7 +26,6 @@ class StrokeSpeedDialState extends State<StrokeSpeedDial> {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        // width: 150.0,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SpeedDial(

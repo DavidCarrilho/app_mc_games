@@ -5,5 +5,8 @@ class SpeedDialEntry {
   final Color? color;
   final String? label;
 
-  const SpeedDialEntry({this.color, this.label});
+  const SpeedDialEntry({
+    this.color,
+    this.label,
+  });
 }

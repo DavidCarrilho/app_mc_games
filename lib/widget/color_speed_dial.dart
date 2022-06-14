@@ -26,7 +26,6 @@ class ColorSpeedDialState extends State<ColorSpeedDial> {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        // width: 180.0,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SpeedDial(
