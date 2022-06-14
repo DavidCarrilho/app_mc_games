@@ -7,8 +7,9 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: const MyApp(),
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: Colors.red,
+          primaryColor: Colors.grey,
         ),
         title: 'MCPaint',
       ),
@@ -35,10 +36,10 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('MCPaint'),
-          centerTitle: true,
-        ),
+        // appBar: AppBar(
+        //   title: const Text('MCPaint'),
+        //   centerTitle: true,
+        // ),
         body: PaintingWidget(color: currentColor!, strokeWidth: currentStrokeWidth!),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Row(

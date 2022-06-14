@@ -34,7 +34,26 @@ class StrokeSpeedDialState extends State<StrokeSpeedDial> {
           visible: true,
           curve: Curves.elasticInOut,
           children: strokeWidths.map(speedDialChild).toList(),
-          child: buildText(currentStrokeWidth!),
+          child: Stack(
+            children: [
+              const Center(child: Icon(Icons.edit, size: 36)),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  height: 26,
+                  width: 26,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    color: Colors.red,
+                  ),
+                  child: Container(
+                    margin: const EdgeInsets.all(2),
+                    child: buildText(currentStrokeWidth!),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       );
 
